@@ -1,0 +1,25 @@
+;; -*- emacs-lisp -*- <15/02/16 06:43:04 /home/dswain/.emacs.d/tramp>
+;; Tramp connection history.  Don't change this file.
+;; You can delete it, forcing Tramp to reapply the checks.
+
+((["scp" nil "104.236.253.65" nil nil]
+  nil)
+ (["scp" "root" "104.236.253.65" nil nil]
+  nil)
+ (["ssh" "root" "104.236.253.65" nil nil]
+  ("uname" "Linux 3.13.0-27-generic")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("stat" "\\stat")
+  ("file-exists" "test -e")
+  ("id" "/usr/bin/id")
+  ("gid-string" "root")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("readlink" "\\readlink")
+  ("gid-integer" 0)
+  ("~" "/root")))

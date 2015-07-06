@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>temp.html<tools></title>
+
+</head>
+
+<body>
+
+<p>;; blogging.el
+;; ------------------
+;; A set of small functions used to help me write &amp; publish blog entries
+;;
+;; Author: Doug Swain (dswain@gmail.com)</p>
+
+<p>(setq blog-entry-dir (expand-file-name "~/Programming/blog-revamp/entry/docs/"))
+(setq blog-file-type ".md")</p>
+
+<p>(defun blog-new-entry (name)
+  "Creates a new file under (concat blog-entry-dir name blog-file-type). It does not save it by default"
+  (interactive "sName: ")</p>
+
+<p>(let ((filename (concat blog-entry-dir name blog-file-type)))
+    (let ((blog-entry-buffer (find-file-noselect filename)))
+      (switch-to-buffer blog-entry-buffer)
+      (set-buffer blog-entry-buffer))))</p>
+
+<p>(defun blog-gen-entry ()
+  "Takes file and generates HTML from Markdown. Ships it to another tool for additional mods &amp; formatting"
+  (interactive)
+  (let ((filename (file-name-sans-extension (buffer-name (current-buffer)))))
+    (markdown-export "temp.html")
+    (message "%s" filename)
+    ;(shell-command (concat "python generate_entry.py temp.html " filename))
+    )
+  )</p>
+
+</body>
+</html>
