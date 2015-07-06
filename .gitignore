@@ -1,0 +1,4 @@
+.*\~$
+session.*$
+abbrev_defs$
+*.elc
